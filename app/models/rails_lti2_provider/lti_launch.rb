@@ -1,6 +1,6 @@
 module RailsLti2Provider
-  class LtiLaunch < ActiveRecord::Base
-    validates_presence_of :tool_id, :nonce
+  class LtiLaunch < ApplicationRecord
+    validates :tool_id, :nonce, presence: true
     belongs_to :tool
     serialize :message
 

@@ -1,5 +1,5 @@
 module RailsLti2Provider
-  class Registration < ActiveRecord::Base
+  class Registration < ApplicationRecord
     validates :correlation_id, uniqueness: true, allow_nil: true
     serialize :tool_proxy_json, JSON
     serialize :registration_request_params, JSON
