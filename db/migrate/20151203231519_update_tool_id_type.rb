@@ -1,4 +1,4 @@
-class UpdateToolIdType < ActiveRecord::Migration
+class UpdateToolIdType < ActiveRecord::Migration[5.1]
   def change
     if defined?(ActiveRecord::ConnectionAdapters::PostgreSQLAdapter) &&
         ActiveRecord::Base.connection.instance_of?(ActiveRecord::ConnectionAdapters::PostgreSQLAdapter)
