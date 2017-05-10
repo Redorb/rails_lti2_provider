@@ -1,5 +1,6 @@
 module RailsLti2Provider
   class Registration < ApplicationRecord
+    attr_accessible :uuid, :registration_request_params, :tool_proxy_json, :workflow_state, :tool, :correlation_id
     validates :correlation_id, uniqueness: true, allow_nil: true
     serialize :tool_proxy_json, JSON
     serialize :registration_request_params, JSON
