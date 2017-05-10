@@ -1,6 +1,5 @@
 module RailsLti2Provider
   class LtiLaunch < ApplicationRecord
-    attr_accessible :tool, :nonce, :message
     validates :tool_id, :nonce, presence: true
     belongs_to :tool
     serialize :message
